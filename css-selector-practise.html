@@ -6,98 +6,89 @@
 
         <style>
             /* 只能在这个style标签里写css，不能改变html结构 */
-            body > p:not(.a) {
+            /* change-1 */
+            body > p:first-child {
                 color: red;
             }
-            /*  */
-            .a[tabindex="1"]:hover {
-                color: red;
-            }
-            .a[tabindex="1"]:focus {
+
+            /* change-2 */
+
+            p.a[tabindex="1"]:focus {
                 color: blue;
             }
-            .a[tabindex="1"]:active {
-                color: green;
-            }
-            /*  */
-            p span {
+            p.a[tabindex="1"]:hover {
                 color: red;
             }
-            p span span {
+            p.a[tabindex="1"]:active {
                 color: green;
             }
-            p span span:last-child {
+
+            /* change-3 */
+            p.a.c > span {
+                color: red;
+            }
+            p.a.c > span > span:first-child {
+                color: green;
+            }
+            p.a.c > span > span:last-child {
                 color: blue;
             }
+
+            /*  */
             div a:visited {
                 color: orange;
             }
-            div a {
+            div a:link {
                 color: pink;
             }
-            div a[href$="com"] {
+            div a[href^="mailto:"i] {
                 color: blue;
             }
-            div a[href^="tel"] {
+            div a[href^="tel:"i] {
                 color: yellow;
             }
             div a[href$="pdf"i] {
                 font-size: 30px;
             }
-            /*  */
-            div.a ul :nth-child(4) {
-                color: red;
-            }
-            div.a ul :nth-child(5) {
-                color: red;
-            }
-            div.a ul :nth-child(6) {
-                color: red;
-            }
+
+            /* change-4 */
+            div.a ul :nth-child(4),
+            div.a ul :nth-child(5),
+            div.a ul :nth-child(6),
             div.a ul :nth-child(7) {
                 color: red;
             }
-            /*  */
+
+            /* change-5 */
+            /* 0>= 的元素不会被选中 */
             div.b ul :nth-child(-n + 25) {
                 color: red;
             }
             div.b ul :nth-child(n + 65) {
                 color: green;
             }
-            div.b ul li {
+            /* 两个选择器一起使用可以起到集合的效果 */
+            div.b li:nth-child(n + 35):nth-child(-n + 50) {
                 color: blue;
             }
-            /*  */
 
-            div.prime ul :not(:nth-child(1)) {
-                color: green;
-            }
-            div.prime ul :nth-child(2),
-            :nth-child(3),
-            :nth-child(5),
-            :nth-child(7),
-            :nth-child(11),
-            :nth-child(13),
-            :nth-child(17),
-            :nth-child(19),
-            :nth-child(23),
-            :nth-child(29),
-            :nth-child(31),
-            :nth-child(37),
-            :nth-child(41),
-            :nth-child(43),
-            :nth-child(47),
-            :nth-child(53),
-            :nth-child(59),
-            :nth-child(61),
-            :nth-child(67),
-            :nth-child(71),
-            :nth-child(73),
-            :nth-child(79),
-            :nth-child(83),
-            :nth-child(89),
-            :nth-child(97) {
+            /* change-6 */
+            div.prime {
                 color: red;
+            }
+            div.prime li:first-child,
+            div.prime li:nth-child(2n + 4),
+            div.prime li:nth-child(3n + 6),
+            div.prime li:nth-child(5n + 10),
+            div.prime li:nth-child(7n + 14) {
+                color: black;
+            }
+
+            div.prime
+                li:not(:first-child):not(:nth-child(2n + 4)):not(
+                    :nth-child(3n + 6)
+                ):not(:nth-child(5n + 10)):not(:nth-child(7n + 14)) {
+                font-size: 150%;
             }
         </style>
     </head>
