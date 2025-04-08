@@ -1,51 +1,51 @@
-<!-- <script id="ch0103/01">
+<script id="ch0103/01">
   var a = parseInt(prompt("Enter a number"));
   var b = parseInt(prompt("Enter b number"));
   var c = a + b;
   console.log(c);
-</script> -->
+</script>
 
-<!-- <script id="ch0103/02">
+<script id="ch0103/02">
   var a = parseInt(prompt("Enter a number"));
   var b = parseInt(prompt("Enter b number"));
   var c = parseInt(prompt("Enter c number"));
   var ret = (a + b) * c;
   console.log(ret);
-</script> -->
+</script>
 
-<!-- <script id="ch0103/03">
+<script id="ch0103/03">
   var a = parseInt(prompt("Enter a number"));
   var b = parseInt(prompt("Enter b number"));
   var c = parseInt(prompt("Enter c number"));
   var ret = parseInt((a + b) / c);
   console.log(ret);
-</script> -->
+</script>
 
-<!-- <script id="ch0103/04">
+<script id="ch0103/04">
   var a = parseInt(prompt("Enter a number"));
   var b = parseInt(prompt("Enter b number"));
 
   var c = parseInt(a / b);
   var d = a % b;
   console.log(c, d);
-</script> -->
+</script>
 
-<!-- <script id="ch0103/05">
+<script id="ch0103/05">
   var a = parseInt(prompt("Enter a number"));
   var b = parseInt(prompt("Enter b number"));
 
   var c = a / b;
 
   console.log(c.toFixed(9));
-</script> -->
+</script>
 
-<!-- <script id="ch0103/06">
+<script id="ch0103/06">
   var a = parseInt(prompt("Enter a number"));
   var b = parseInt(prompt("Enter b number"));
   var c = parseFloat(b / a) * 100;
 
   console.log(c.toFixed(3) + "%");
-</script> -->
+</script>
 
 <script id="ch0103/07">
   var x = parseFloat(prompt("Enter x number"));
@@ -55,4 +55,127 @@
   var d = parseFloat(prompt("Enter d number"));
   var ret = a * x * x * x + b * x * x + c * x + d;
   console.log(ret.toFixed(7));
+</script>
+
+<script id="ch0103/08">
+  var a = parseFloat(prompt("Enter a number"));
+
+  var ret = (5 * (a - 32)) / 9;
+  console.log(ret.toFixed(5));
+</script>
+
+<script id="ch0103/09">
+  var r = parseFloat(prompt("Enter the radius "));
+  var pi = 3.14159;
+
+  var Diameter = 2 * r;
+  var perimeter = 2 * pi * r;
+  var area = pi * r * r;
+  console.log(
+    Diameter.toFixed(4) + " " + perimeter.toFixed(4) + " " + area.toFixed(4)
+  );
+</script>
+
+<script id="ch0103/10">
+  var r1 = parseFloat(prompt("Enter the r1 "));
+  var r2 = parseFloat(prompt("Enter the r2 "));
+  var ret = 1 / (1 / r1 + 1 / r2);
+
+  console.log(ret.toFixed(2));
+</script>
+
+<script id="ch0103/11">
+  var a = parseFloat(prompt("Enter the a "));
+  var b = parseFloat(prompt("Enter the b "));
+
+  var ret = a % b;
+
+  console.log(ret.toFixed(4));
+</script>
+
+<script id="ch0103/12">
+  var a = parseFloat(prompt("Enter the a "));
+  var pi = 3.14;
+  var ret = a ** 3 * pi * (4 / 3);
+
+  console.log(ret.toFixed(2));
+</script>
+
+<script id="ch0103/13">
+  var a = parseInt(prompt("Enter the a "));
+  var b = a % 10;
+  var c = ((a % 100) - b) / 10;
+  var d = (a - (a % 100)) / 100;
+
+  console.log(b + "" + c + "" + d);
+</script>
+
+<script id="ch0103/14">
+  var a = parseInt(prompt("Enter the a "));
+  var b = parseInt(prompt("Enter the b "));
+  var pi = 3.14159;
+  var c = pi * b * b * a;
+  var sum = 20 * 1000;
+  var ret = sum / c;
+  var ret =
+    ret.toFixed(0) * c < sum ? Number(ret.toFixed(0)) + 1 : ret.toFixed(0);
+  console.log(ret);
+</script>
+
+<script id="ch0103/15">
+  var a = parseInt(prompt("Enter the a "));
+  var b = parseInt(prompt("Enter the b "));
+  var c = parseInt(prompt("Enter the c "));
+  var sub = (c / b).toFixed(0);
+  sub = sub * b < c ? Number(sub) + 1 : sub;
+  var ret = a - sub;
+  console.log(ret);
+</script>
+
+<script id="ch0103/16">
+  var ax = parseInt(prompt("Enter the ax "));
+  var ay = parseInt(prompt("Enter the ay "));
+  var bx = parseInt(prompt("Enter the bx "));
+  var by = parseInt(prompt("Enter the by "));
+  var subX = ax - bx;
+  var subY = ay - by;
+  var ret = Math.sqrt(subX * subX + subY * subY);
+  console.log(ret.toFixed(3));
+</script>
+
+<script id="ch0103/17">
+  var ax = parseInt(prompt("Enter the ax "));
+  var ay = parseInt(prompt("Enter the ay "));
+  var bx = parseInt(prompt("Enter the bx "));
+  var by = parseInt(prompt("Enter the by "));
+  var cx = parseInt(prompt("Enter the cx "));
+  var cy = parseInt(prompt("Enter the cy "));
+  var a = Math.sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
+  var b = Math.sqrt((ax - cx) * (ax - cx) + (ay - cy) * (ay - cy));
+  var c = Math.sqrt((cx - bx) * (cx - bx) + (cy - by) * (cy - by));
+  var p = (a + b + c) / 2;
+  var ret = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+  console.log(ret.toFixed(2));
+</script>
+
+<script id="ch0103/18">
+  var a1 = parseInt(prompt("Enter the a1 "));
+  var a2 = parseInt(prompt("Enter the a2 "));
+  var n = parseInt(prompt("Enter the n "));
+  var an = (a2 - a1) * (n - 1) + a1;
+  console.log(an);
+</script>
+
+<script id="ch0103/19">
+  var A = parseInt(prompt("Enter the A "));
+  var B = parseInt(prompt("Enter the B "));
+
+  var an = A * B;
+  console.log(an);
+</script>
+
+<script id="ch0103/20">
+  var A = parseInt(prompt("Enter the A "));
+  var an = 2 ** A;
+  console.log(an);
 </script>
