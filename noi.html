@@ -179,3 +179,287 @@
   var an = 2 ** A;
   console.log(an);
 </script>
+
+<script id="ch0104/01">
+  var n = parseInt(prompt("Enter n number"));
+
+  var ret = "positive";
+  if (n < 0) {
+    ret = "negative";
+  } else if (n == 0) {
+    ret = "zero";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/02">
+  var n = parseFloat(prompt("Enter n number"));
+
+  if (n < 0) {
+    n = -n;
+  }
+  console.log(n.toFixed(2));
+</script>
+
+<script id="ch0104/03">
+  var n = parseInt(prompt("Enter n number"));
+  var ret = "odd";
+  if (n % 2 == 0) {
+    ret = "even";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/04">
+  var char = prompt("Enter the char");
+  var ascii = char.charCodeAt(0);
+  var ret = "YES";
+  if (ascii % 2 == 0) {
+    ret = "NO";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/05">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+
+  var ret = ">";
+  if (a == b) {
+    ret = "=";
+  } else if (a < b) {
+    ret = "<";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/06">
+  var a = parseInt(prompt("Enter the a"));
+
+  var ret = 0;
+  if (a >= 10 && a <= 99) {
+    ret = "1";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/07">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+
+  var ret = 0;
+  if (a > 9 || b > 19) {
+    ret = 1;
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/08">
+  var a = parseInt(prompt("Enter the a"));
+
+  var ret = "NO";
+  if (a % 3 == 0 && a % 5 == 0) {
+    ret = "YES";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/09">
+  var a = parseInt(prompt("Enter the a"));
+
+  var ret = "n";
+  var pre = false;
+  if (a % 3 == 0) {
+    ret = 3;
+    pre = true;
+  }
+  if (a % 5 == 0) {
+    if (pre) {
+      ret = ret + " " + 5;
+    } else {
+      ret = 5;
+      pre = true;
+    }
+  }
+
+  if (a % 7 == 0) {
+    if (pre) {
+      ret = ret + " " + 7;
+    } else {
+      ret = 7;
+    }
+  }
+
+  console.log(ret);
+</script>
+
+<script id="ch0104/10">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+
+  var af = a < 60 ? 1 : 0;
+  var bf = b < 60 ? 1 : 0;
+  var ret = af + bf == 1 ? 1 : 0;
+  console.log(ret);
+</script>
+
+<script id="ch0104/11">
+  var a = parseInt(prompt("Enter the a"));
+
+  var ret = "YES";
+
+  if (a == 1 || a == 3 || a == 5) {
+    ret = "NO";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/12">
+  var a = parseInt(prompt("Enter the a"));
+
+  var bike = 27 + 23 + a / 3;
+  var walk = a / 1.2;
+
+  if (bike < walk) {
+    ret = "Bike";
+  } else if (bike > walk) {
+    ret = "Walk";
+  } else {
+    ret = "All";
+  }
+  console.log(ret);
+</script>
+
+<script id="ch0104/13">
+  var x = parseFloat(prompt("Enter the x"));
+
+  var y = 0;
+
+  if (x < 5) {
+    y = -1 * x + 2.5;
+  } else if (x < 10) {
+    y = 2 - 1.5 * (x - 3) * (x - 3);
+  } else {
+    y = x / 2 - 1.5;
+  }
+  console.log(y.toFixed(3));
+</script>
+
+<script id="ch0104/14">
+  var x = parseInt(prompt("Enter the x"));
+  var hurry = prompt("Enter the x") == "y" ? true : false;
+
+  var y = 8;
+
+  if (x > 1000) {
+    var appendWeight = x - 1000;
+    y += Math.ceil(appendWeight / 500) * 4;
+  }
+  if (hurry) {
+    y += 5;
+  }
+  console.log(y);
+</script>
+
+<script id="ch0104/15">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+  var c = parseInt(prompt("Enter the c"));
+  var y = a > b ? (a > c ? a : c) : b > c ? b : c;
+  console.log(y);
+</script>
+
+<script id="ch0104/16">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+  var c = parseInt(prompt("Enter the c"));
+  var y = "no";
+
+  if (a + b > c && a + c > b && b + c > a) {
+    y = "yes";
+  }
+
+  console.log(y);
+</script>
+
+<script id="ch0104/17">
+  var a = parseInt(prompt("Enter the a"));
+
+  var y = "N";
+
+  if (a % 400 == 0 || (a % 4 == 0 && a % 100 != 0)) {
+    y = "Y";
+  }
+
+  console.log(y);
+</script>
+
+<script id="ch0104/18">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+
+  var y = "no";
+
+  if (a <= 1 && a >= -1 && b <= 1 && b >= -1) {
+    y = "yes";
+  }
+
+  console.log(y);
+</script>
+
+<script id="ch0104/19">
+  var a = parseInt(prompt("Enter the a"));
+  var b = parseInt(prompt("Enter the b"));
+  var c = prompt("Enter the c");
+
+  var y = "no";
+
+  if (c == "+") {
+    y = a + b;
+  } else if (c == "-") {
+    y = a - b;
+  } else if (c == "*") {
+    y = a * b;
+  } else if (c == "/") {
+    if (b == 0) {
+      y = "Divided by zero!";
+    } else {
+      y = a / b;
+    }
+  } else {
+    y = "Invalid operator!";
+  }
+
+  console.log(y);
+</script>
+
+<script id="ch0104/20">
+  var a = parseFloat(prompt("Enter the a"));
+  var b = parseFloat(prompt("Enter the b"));
+  var c = parseFloat(prompt("Enter the c"));
+
+  var delta = b * b - 4 * a * c;
+  var x1, x2;
+  if (delta == 0) {
+    x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+    x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+  } else if (delta > 0) {
+    x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+    x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+  } else {
+    var real = -b / (2 * a);
+    var virtual = Math.sqrt(4 * a * c - b * b) / (2 * a);
+    x1 = real.toFixed(5) + "+" + virtual.toFixed(5) + "i";
+    x2 = real.toFixed(5) + "-" + virtual.toFixed(5) + "i";
+  }
+
+  console.log("x1=" + x1 + ";" + "x2=" + x2);
+</script>
+
+<script id="ch0104/21">
+  var n = parseInt(prompt("Enter the n"));
+  var x = parseInt(prompt("Enter the x"));
+  var y = parseInt(prompt("Enter the y"));
+  var ret = n - Math.ceil(y / x);
+  console.log(ret);
+</script>
