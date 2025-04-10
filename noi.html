@@ -463,3 +463,154 @@
   var ret = n - Math.ceil(y / x);
   console.log(ret);
 </script>
+
+<script id="ch0105/01">
+  var n = parseInt(prompt("Enter the n"));
+  var count = n;
+  var sum = 0;
+
+  while (n > 0) {
+    var a = parseInt(prompt("Enter the a"));
+    sum += a;
+    n--;
+  }
+  var ret = sum / count;
+  console.log(ret.toFixed(2));
+</script>
+
+<script id="ch0105/02">
+  var n = 12;
+  var count = n;
+  var sum = 0;
+
+  while (n > 0) {
+    var a = parseFloat(prompt("Enter the a"));
+    sum += a;
+    n--;
+  }
+  var ret = sum / count;
+  console.log("$" + ret.toFixed(2));
+</script>
+
+<script id="ch0105/03">
+  var n = parseInt(prompt("Enter the n"));
+  var count = n;
+  var sum = 0;
+
+  while (n > 0) {
+    var a = parseFloat(prompt("Enter the a"));
+    sum += a;
+    n--;
+  }
+  var ret = sum / count;
+  console.log(ret.toFixed(4));
+</script>
+
+<script id="ch0105/04">
+  var n = parseInt(prompt("Enter the n"));
+  var count = n;
+  var sum = 0;
+
+  while (n > 0) {
+    var a = parseInt(prompt("Enter the a"));
+    sum += a;
+    n--;
+  }
+  var ret = sum / count;
+  console.log(sum + " " + ret.toFixed(5));
+</script>
+
+<script id="ch0105/05">
+  var n = parseInt(prompt("Enter the n"));
+
+  var max = -Infinity;
+
+  while (n > 0) {
+    var a = parseInt(prompt("Enter the a"));
+    max = a > max ? a : max;
+    n--;
+  }
+
+  console.log(max);
+</script>
+
+<script id="ch0105/06">
+  var n = parseInt(prompt("Enter the n"));
+
+  var max = 0;
+  var min = -1;
+
+  while (n > 0) {
+    var a = parseInt(prompt("Enter the a"));
+    max = a > max ? a : max;
+    if (min == -1) {
+      min = a;
+    } else {
+      min = a < min ? a : min;
+    }
+    n--;
+  }
+
+  console.log(max - min);
+</script>
+
+<script id="ch0105/07">
+  var n = parseInt(prompt("Enter the n"));
+
+  var gold = 0;
+  var sliver = 0;
+  var copper = 0;
+  var sum = 0;
+  while (n > 0) {
+    var a = parseInt(prompt("Enter the a"));
+    gold += a;
+    var b = parseInt(prompt("Enter the b"));
+    sliver += b;
+    var c = parseInt(prompt("Enter the c"));
+    copper += c;
+    n--;
+  }
+  sum = gold + sliver + copper;
+  console.log(gold + " " + sliver + " " + copper + " " + sum);
+</script>
+
+<script id="ch0105/08">
+  var n = parseInt(prompt("Enter the n"));
+  var count = n;
+  var sum = 0;
+  while (n > 1) {
+    var a = parseInt(prompt("Enter the a"));
+    sum += a;
+    n--;
+  }
+  var all = (count - 2) * 180;
+  console.log(all - sum);
+</script>
+
+<script id="ch0105/09">
+  var m = parseInt(prompt("Enter the m"));
+  var n = parseInt(prompt("Enter the n"));
+  var start = m % 2 == 1 ? m : m + 1;
+  var sum = 0;
+  while (start <= n) {
+    sum += start;
+    start += 2;
+  }
+
+  console.log(sum);
+</script>
+
+<script id="ch0105/10">
+  var m = parseInt(prompt("Enter the m"));
+  var n = parseInt(prompt("Enter the n"));
+
+  var sum = 0;
+  while (m <= n) {
+    if (m % 17 == 0) {
+      sum += m;
+    }
+    m += 1;
+  }
+
+  console.log(sum);
+</script>
